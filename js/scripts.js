@@ -14,3 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // Opcionalno: Dodavanje navigacionih tačaka ili strelica
 });
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
