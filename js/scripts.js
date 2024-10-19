@@ -15,18 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Opcionalno: Dodavanje navigacionih tačaka ili strelica
 });
 
-// scripts.js
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+// Prvo pronađemo elemente
+const hamburger = document.querySelector('#hamburger');
+const navMenu = document.querySelector('#nav-menu');
 
 // Otvaranje i zatvaranje menija na klik dugmeta
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+hamburger.addEventListener('click', (event) => {
+  event.stopPropagation(); // Sprečava zatvaranje odmah pri kliku na dugme
+  navMenu.classList.toggle('active');
 });
 
-// Zatvaranje menija kada korisnik klikne izvan njega
-document.addEventListener("click", (event) => {
-if (!navMenu.contains(event.target) && event.target !== hamburger) {
-navMenu.classList.remove("active");
-}
+// Zatvaranje menija ako korisnik klikne van njega
+document.addEventListener('click', (event) => {
+  if (!navMenu.contains(event.target)) {
+    navMenu.classList.remove('active');
+  }
 });
