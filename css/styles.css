@@ -321,6 +321,27 @@ footer .social-links a:hover {
   cursor: pointer;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  display: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-to-top.show {
+  display: flex;
+}
+
 /* Responsive */
 
 /* Stilizacija za manje ekrane */
