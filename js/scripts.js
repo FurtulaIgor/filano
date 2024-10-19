@@ -51,3 +51,33 @@ scrollToTopButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Za cart
+
+// Selektujemo elemente
+const cartIcon = document.getElementById("cart-icon");
+const cartCount = document.getElementById("cart-count");
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+// Inicijalizujemo brojač proizvoda
+let cart = [];
+
+// Funkcija za dodavanje proizvoda u korpu
+function addToCart(product) {
+  cart.push(product);
+  updateCartCount();
+  alert(`${product} je dodat u korpu!`);
+}
+
+// Funkcija za ažuriranje brojača korpe
+function updateCartCount() {
+  cartCount.textContent = cart.length;
+}
+
+// Dodajemo event listener na sva dugmad "Dodaj u Korpu"
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const product = button.getAttribute("data-product");
+    addToCart(product);
+  });
+});
