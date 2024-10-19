@@ -25,8 +25,8 @@ hamburger.addEventListener("click", () => {
 });
 
 // Zatvaranje menija kada korisnik klikne izvan njega
-document.addEventListener("click", (event) => {
-  if (!navMenu.contains(event.target) && event.target !== hamburger) {
-    navMenu.classList.remove("active");
-  }
-});
+//document.addEventListener("click", (event) => {
+//if (!navMenu.contains(event.target) && event.target !== hamburger) {
+//navMenu.classList.remove("active");
+//}
+//});
