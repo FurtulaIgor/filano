@@ -32,6 +32,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// Za dugme scrollToTop
 const scrollToTopButton = document.getElementById("scrollToTop");
 
 // Prikaz dugmeta kada korisnik skroluje dole
