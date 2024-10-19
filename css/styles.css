@@ -326,7 +326,12 @@ footer .social-links a:hover {
 /* Stilizacija za manje ekrane */
 @media (max-width: 768px) {
   nav {
-    display: none; /* Skriva meni po defaultu */
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav.active {
+    display: block;
   }
 
   .hamburger {
